@@ -1,0 +1,44 @@
+{
+  "name": "pomodoro-app",
+  "version": "1.0.0",
+  "description": "Pomodoro App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Victor Correa",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.1.2",
+    "electron-builder": "^24.9.1"
+  },
+
+  "build": {
+    "productName": "PomodoroApp",
+    "appId": "com.example.pomodoro",
+    "directories": {
+        "output": "dist"
+    },
+    "win": {
+        "target": [
+            {
+                "target": "nsis",
+                "arch": [
+                    "x64",
+                    "ia32"
+                ]
+            }
+        ]
+    },
+    "mac": {
+        "target": "dmg",
+        "category": "public.app-category.productivity"
+    },
+    "linux": {
+        "target": "AppImage"
+    }
+}
+
+}
